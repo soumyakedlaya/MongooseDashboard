@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Animal</title>
+  </head>
+  <body>
+    <h1>Edit <%=editAnimalInfo.animalType %></h1>
+    <form action = "/animals/<%=editAnimalInfo._id %>" method= "post">
+      Type of animal: <input type = "text" name="animalType" value="<%= editAnimalInfo.animalType %>"<br>
+      <br>Age: <input type = "text" name = "age" value="<%= editAnimalInfo.age %>"><br>
+      <br>Color: <input type = "text" name = "color" value="<%= editAnimalInfo.color %>"><br>
+      <br><input type = "submit" value = "Edit animal">
+    </form>
+    <br><a href="/">Home</a>
+  </body>
+</html>

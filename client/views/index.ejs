@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<body>
+  <h1>Here's a list of all the animals!</h1>
+  <a href="/animals/new">Add a new animal</a><br>
+  <!-- Display all animals -->
+  <% for (item in animals) { %>
+    <br>Type of animal: <a href="/animals/<%= animals[item]._id %>"><%= animals[item].animalType %></a>
+      <br><a href="/animals/<%= animals[item]._id %>/edit">Edit</a>
+      <form action="/animals/<%= animals[item]._id %>/destroy" method="post">
+        <input type = "submit" value="Delete">
+      </form>
+  <% } %>
+</body>
+</html>
